@@ -9,7 +9,9 @@ resource "kubernetes_namespace_v1" "irsa" {
   }
 
   timeouts {
-    delete = "15m"
+    delete = "30m"
+    create= "2h"
+    update = "2h"
   }
 
   lifecycle {
